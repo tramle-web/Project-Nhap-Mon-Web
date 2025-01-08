@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png">
+    <title>Quản lý nhân viên</title>
+    <style>
+        /* Reset mac dinh */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Cau hinh nen va bo cuc */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4c7c97;
+            position: relative;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            /* Biến thành khối để margin hoạt động */
+            width: 270px;
+            height: 3px;
+            background: radial-gradient(#cddc39, #fff);
+            margin: 10px auto 0 auto;
+            /* margin auto căn giữa khối */
+        }
+
+        /* Bang hien thi */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        table th {
+            background-color: #4c7c97;
+            color: white;
+            text-align: center;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Hinh anh dai dien */
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+        }
+
+        /* Email link */
+        .email {
+            color: #4c7c97;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        /* Can giua cot */
+        .text-center {
+            text-align: center;
+        }
+
+        /* Nut quay lai trang admin */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #4c7c97;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #233d4c;
+        }
+
+        .back-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="admin.html" class="back-btn">&larr;</a>
+
+        <h1>DANH SÁCH NHÂN VIÊN</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ Tên</th>
+                    <th>Email</th>
+                    <th>Hình đại diện</th>
+                    <th>Chức vụ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Lưu Trần Nhã Khuê</td>
+                    <td><a href="mailto:khueb2204942@student.ctu.edu.vn"
+                            class="email">khueb2204942@student.ctu.edu.vn</a></td>
+                    <td class="text-center"><img src="img/link_hinh_1.jpg" alt="Lưu Trần Nhã Khuê" class="profile-img">
+                    </td>
+                    <td>Quản lý</td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td>Hà Đức Anh</td>
+                    <td><a href="mailto:anhb2204915@student.ctu.edu.vn" class="email">anhb2204915@student.ctu.edu.vn</a>
+                    </td>
+                    <td class="text-center"><img src="img/link_hinh_3.jpg" alt="Hà Đức Anh" class="profile-img"></td>
+                    <td>Nhân viên</td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td>Đỗ Nhật Anh</td>
+                    <td><a href="mailto:anhb2204914@student.ctu.edu.vn" class="email">anhb2204914@student.ctu.edu.vn</a>
+                    </td>
+                    <td class="text-center"><img src="img/link_hinh_2.jpg" alt="Đỗ Nhật Anh" class="profile-img"></td>
+                    <td>Nhân viên</td>
+                </tr>
+                <tr>
+                    <td class="text-center">4</td>
+                    <td>Nguyễn Thị Huỳnh Như</td>
+                    <td><a href="mailto:nhub2204960@student.ctu.edu.vn" class="email">nhub2204960@student.ctu.edu.vn</a>
+                    </td>
+                    <td class="text-center"><img src="img/link_hinh_4.jpg" alt="Nguyễn Thị Huỳnh Như"
+                            class="profile-img"></td>
+                    <td>Nhân viên</td>
+                </tr>
+                <tr>
+                    <td class="text-center">5</td>
+                    <td>Lê Bích Trâm</td>
+                    <td><a href="mailto:tramb2204973@student.ctu.edu.vn"
+                            class="email">tramb2204973@student.ctu.edu.vn</a></td>
+                    <td class="text-center"><img src="img/link_hinh_5.jpg" alt="Lê Bích Trâm" class="profile-img"></td>
+                    <td>Nhân viên</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

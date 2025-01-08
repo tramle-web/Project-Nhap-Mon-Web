@@ -1,0 +1,152 @@
+/* ----------Log In---------- */
+.container-main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffff;
+}
+
+.container-div {
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid rgb(230, 90, 140);
+  box-shadow: 0 0 20px rgba(230, 90, 140, 0.7);
+  background: radial-gradient(#bce4eb, #fce0ce, #ffff);
+}
+
+#fb-hover:hover {
+  background: #3b5998 !important;
+  color: white !important;
+}
+
+#ins-hover:hover {
+  background: #db4490 !important;
+  color: white !important;
+}
+
+#twitter-hover:hover {
+  background: #1da1f2 !important;
+  color: white !important;
+}
+
+/* Style chung */
+/* hieu ung chan trang*/
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+footer {
+  background: linear-gradient(90deg, #bce4eb, #fce0ce, #ffffff);
+  padding: 20px;
+  /* text-align: center; */
+  color: #333;
+}
+
+/* thiet lap cau truc cot trong footer */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* thiet lap kieu cho cac cot trong footer */
+.footer-col {
+  width: 25%;
+  margin-bottom: 30px;
+}
+
+/* thiet lap kieu cho tieu de cua moi cot trong footer */
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* thiet lap kieu cho danh sach trong footer */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* thiet lap kieu cho kieu cho cac muc trong danh sach cua footer */
+.footer-col ul li {
+  line-height: 2;
+}
+
+footer h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff5733;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.row,
+.form-label,
+.form-control {
+  margin-bottom: auto;
+}
+
+/* Style links hover */
+a.nav-hover:hover {
+  color: #fce0ce !important;
+}
+
+/* Style footer social media icon */
+.social-icons {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.fa-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.fa-twitter:hover {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.fa-instagram:hover {
+  background-color: #db4490;
+  color: #fff;
+}
+
+.fa-tiktok:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style footer payment icon */
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  /*cho phep tu xuong dong*/
+  font-size: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+
+.payment-icons:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+header li a:hover {
+  border-radius: 5px;
+  background: radial-gradient(#ffff, #fce0ce);
+}
+
+#h2-main {
+  font-weight: bold;
+  color: deeppink;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}

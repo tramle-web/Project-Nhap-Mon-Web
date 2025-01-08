@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xây dựng chức năng thêm mới sản phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset mac dinh */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            border: 0;
+        }
+
+        .them-moi-san-pham {
+            width: 50%;
+            border: 1px solid #e9e0e0;
+            margin: auto;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 2px 2px 5px #575454;
+        }
+
+        .them-moi-san-pham label,
+        input {
+            width: 100%;
+            display: block;
+        }
+
+        .them-moi-san-pham label {
+            margin-top: 20px;
+        }
+
+        .them-moi-san-pham input,
+        .them-moi-san-pham select {
+            margin-top: 5px;
+            padding: 10px 20px;
+            border: 1px solid #add;
+            border-radius: 5px;
+        }
+
+        .them-moi-san-pham button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid #add;
+            border-radius: 5px;
+            background-color: rgb(84, 182, 182);
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .them-moi-san-pham button:hover {
+            background-color: rgb(12, 98, 98);
+        }
+
+        /* Ben trong button */
+        .them-moi-san-pham button i {
+            margin-right: 8px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        /* Nut quay lai */
+        .back-button {
+            padding: 10px 20px;
+            background-color: #4c7c97;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #233d4c;
+        }
+    </style>
+
+    <script src="javascript/sanpham.js"></script>
+</head>
+
+<body>
+    <!--Nut quay lai trang admin-->
+    <div class="container">
+        <button class="back-button" onclick="window.location.href='quanlysanpham.html'">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+
+    <!--Form them moi san pham-->
+    <div class="them-moi-san-pham">
+        <label for="name">Nhập tên sản phẩm</label>
+        <input type="text" id="name" />
+        <label for="price">Nhập giá sản phẩm</label>
+        <input type="number" id="price" />
+        <label for="photo">Chọn hình ảnh sản phẩm</label>
+        <input type="file" id="photo" accept="image/*" />
+        <label for="tag">Chọn tag sản phẩm</label>
+        <select id="tag">
+            <option value="Nổi Bật">Nổi Bật</option>
+            <option value="Mới nhất">Mới nhất</option>
+            <option value="Được Yêu Thích">Được Yêu Thích</option>
+            <option value="Được mua nhiều nhất">Được mua nhiều nhất</option>
+            <option value="Không Có" selected>Không Có</option>
+        </select>
+        <button onclick="onClickTaoSanPham()">Thêm sản phẩm</button>
+    </div>
+
+    <script>
+        // Lấy danh sách sản phẩm từ localStorage và đảm bảo là một mảng hợp lệ.
+        var listProduct = JSON.parse(localStorage.getItem('listProduct'));
+
+        // Kiểm tra nếu listProduct không phải là mảng hoặc không tồn tại, khởi tạo lại là mảng rỗng.
+        if (!Array.isArray(listProduct)) {
+            listProduct = []; // Nếu không phải mảng, tạo mảng mới
+        }
+
+        // #Tạo đối tượng từ sản phẩm
+        // 1. Lắng nghe sự kiện onclick, khi người dùng nhấn vào button tạo sản phẩm.
+        // 2. Lấy toàn bộ dữ liệu người dùng nhập vào.
+        // 3. Tạo ra đối tượng từ các dữ liệu người dùng nhập vào.
+        function onClickTaoSanPham() {
+            console.log("Goi ham onClickTaoSanPham");
+
+            var nodeName = document.getElementById("name");
+            var name = nodeName.value;
+            if (!name) {
+                alert("Vui lòng nhập tên sản phẩm.");
+                return;
+            }
+            nodeName.value = '';
+
+            var nodePrice = document.getElementById("price");
+            var price = nodePrice.value;
+            if (!price || price <= 0) {
+                alert("Vui lòng nhập giá sản phẩm hợp lệ.");
+                return;
+            }
+            nodePrice.value = '';
+
+            var nodePhoto = document.getElementById("photo");
+            var photo = nodePhoto.files[0];
+            if (!photo) {
+                alert("Vui lòng chọn hình ảnh sản phẩm.");
+                return;
+            }
+            nodePhoto.value = '';
+
+            var reader = new FileReader();
+            reader.onloadend = function () {
+                var tag = document.getElementById("tag").value;
+                if (!tag) {
+                    alert("Vui lòng nhập tag sản phẩm.");
+                    return;
+                }
+
+                // tao doi tuong san pham
+                var sanPham = taoDoiTuongSanPham(name, price, reader.result, tag);
+                console.log(sanPham);
+
+                // luu san pham vao danh sach va luu vao localStorage
+                listProduct.push(sanPham);
+                var jsonListProduct = JSON.stringify(listProduct);
+                localStorage.setItem("listProduct", jsonListProduct);
+
+                alert("Thêm sản phẩm thành công");
+
+                // chuyen huong ve trang quan ly san pham
+                window.location.href = "quanlysanpham.html";
+            };
+            reader.readAsDataURL(photo); // chuyen doi hinh anh
+        }
+    </script>
+</body>
+
+</html>

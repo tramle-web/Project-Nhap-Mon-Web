@@ -1,0 +1,359 @@
+article {
+  margin: 0 200px;
+}
+
+/* San Pham Noi Bat */
+.product-one-content {
+  background-color: pink;
+  padding: 12px;
+
+}
+
+.product-one-items {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+h2::after {
+  position: relative;
+  left: 130px;
+  content: "";
+  display: block;
+  width: 270px;
+  height: 3px;
+  transform: skewX(-12deg) translateX(-50%);
+  background: radial-gradient(#cddc39, #fff);
+  margin: 12px 0 16px;
+}
+
+.product-one-item {
+  width: 23.5%;
+  padding: 50px 12px 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-one-item:hover img,
+.product-coll-item:hover img {
+  transform: translateY(-5%);
+  transition: all 0.3s ease;
+
+}
+
+.product-one-item img {
+  width: 100%;
+}
+
+.product-one-item-text {
+  padding-top: 10px;
+}
+
+.product-one-item-text li {
+  margin-left: 6px;
+}
+
+.badge-large {
+  color: #000;
+}
+
+.bg-subtle {
+  background-color: #f1aeb5;
+}
+
+.product-one-item-text li:first-child,
+.product-coll-item li:first-child {
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.product-one-item-text.fa {
+  width: 12px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.product-one-item-text li:nth-child(2):hover,
+.product-coll-item li:nth-child(2):hover {
+  color: rgb(47, 137, 211);
+}
+
+.product-one-item-text li:nth-child(3),
+.product-coll-item li:nth-child(3) {
+  font-weight: bold;
+}
+
+
+/* Tất Cả Sản Phẩm  - product collection*/
+.product-coll-one-content-product {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.product-coll-item {
+  width: 23.5%;
+  margin: 5px;
+}
+
+.product-coll-item:hover {
+  box-shadow: 3px 3px 3px #ddd;
+}
+
+.product-coll-item img {
+  width: 100%;
+}
+
+.fa-shopping-cart {
+  font-size: 24px;
+  color: rgb(243, 176, 8);
+}
+
+.stars {
+  color: rgb(235, 235, 153);
+}
+
+.product-coll-one {
+  margin-top: 30px;
+  padding: 12px;
+}
+
+.product-coll-one-content-title {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.product-coll-one-content-title ul {
+  display: flex;
+
+}
+
+.product-coll-one-content-title li {
+  padding: 6px;
+  border: 1px solid #7a5353;
+  margin-left: 12px;
+  border-radius: 40px;
+}
+
+.product-coll-one-content-title a:hover {
+  color: rgb(71, 102, 255);
+  font-weight: bold;
+}
+
+.product-coll-item-text {
+
+  padding: 30px 12px 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.product-coll-item img {
+  width: 100%;
+  height: 300px;
+}
+
+.product-coll-one {
+  background-color: lightblue;
+}
+
+.product-coll-item {
+
+  padding: 30px 12px 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-method img {
+  width: 30px;
+  margin: 0 5px;
+}
+
+header li a:hover {
+  border-radius: 5px;
+  background: radial-gradient(#ffff, #fce0ce);
+}
+
+/* ----------Cart---------- */
+.cart-bill {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding-top: 30px;
+  border-radius: 10px;
+}
+
+.cart h1 {
+  margin-bottom: 20px;
+}
+
+.cart table {
+  width: 100%;
+}
+
+.cart table thead tr th:first-child {
+  text-align: center;
+}
+
+.cart table tbody tr td {
+  border-bottom: 2px solid black;
+  padding: 10px 0px;
+}
+
+/* Style chung */
+/* hieu ung chan trang*/
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+footer {
+  background: linear-gradient(90deg, #bce4eb, #fce0ce, #ffffff);
+  padding: 20px;
+  /* text-align: center; */
+  color: #333;
+}
+
+/* thiet lap cau truc cot trong footer */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* thiet lap kieu cho cac cot trong footer */
+.footer-col {
+  width: 25%;
+  margin-bottom: 30px;
+}
+
+/* thiet lap kieu cho tieu de cua moi cot trong footer */
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* thiet lap kieu cho danh sach trong footer */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* thiet lap kieu cho kieu cho cac muc trong danh sach cua footer */
+.footer-col ul li {
+  line-height: 2;
+}
+
+footer h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff5733;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* hieu ung noi bat cho chu*/
+.highlight {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff5733;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.row,
+.form-label,
+.form-control {
+  margin-bottom: auto;
+}
+
+/* Style links hover */
+a.nav-hover:hover {
+  color: #fce0ce !important;
+}
+
+/* Style footer social media icon */
+.fa-facebook,
+.fa-twitter,
+.fa-tiktok,
+.fa-instagram {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  color: #333;
+}
+
+.fa-facebook:hover {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.fa-twitter:hover {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.fa-instagram:hover {
+  background-color: #db4490;
+  color: #fff;
+}
+
+.fa-tiktok:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style footer payment icon */
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  /*cho phep tu xuong dong*/
+  font-size: 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+
+.payment-icons:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+/* Huỳnh Như bổ sung */
+/* Nút quay về đầu trang */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4d84a2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: none; /* Ẩn mặc định */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#backToTop:hover {
+  transform: scale(1.1); /* Phóng to khi rê chuột */
+}

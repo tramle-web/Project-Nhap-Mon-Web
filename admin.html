@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/logo.png">
+  <title>Trang Admin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 15px 25px;
+      margin: 20px;
+      cursor: pointer;
+      background-color: #4c7c97;
+      /* Màu nền của nút */
+      color: white;
+      /* Màu chữ */
+      border-radius: 5px;
+      /* Bo tròn các góc của nút */
+      border: none;
+      /* Loại bỏ viền của button */
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      /* Hiệu ứng chuyển màu và nhấn nút */
+    }
+
+    .btn:hover {
+      background-color: #233d4c;
+      /* Màu nền khi hover */
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+      /* Hiệu ứng thu nhỏ khi nhấn nút */
+    }
+
+    h1 {
+      color: rgb(188, 118, 130);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Administrator</h1>
+
+    <!-- Nút nhấn với thẻ button -->
+    <button class="btn" onclick="window.location.href='quanlynhanvien.html'">
+      Quản lý nhân viên
+    </button>
+    <button class="btn" onclick="window.location.href='quanlysanpham.html'">
+      Quản lý sản phẩm
+    </button>
+  </div>
+</body>
+
+</html>

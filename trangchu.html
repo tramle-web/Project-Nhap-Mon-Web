@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New York Fashion Store</title>
+  <link rel="icon" href="img/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="CSS_1/style.css">
+  <!--Bổ sung-->
+  <script>
+    // hàm xử lý đã đăng ký hay chưa?
+    function checkLogin() {
+      const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+      if (isLoggedIn === 'true') {
+        // nếu đã đăng ký chuyển qua trang product
+        window.location.href = "product.html";
+      } else {
+        // nếu chưa chuyển qua trang dangky
+        window.location.href = "dangky.html";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <a href="trangchu.html"></a>
+    <nav class="navbar navbar-expand-sm" style="background: linear-gradient(to left, lightblue, white) " ;>
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <img src="img/home.png" alt="" style="width: 125px; padding-left: 20px;" usemap="#home">
+            <map name="home">
+              <area shape="rect" coords="1,0,293,108" href="trangchu.html" alt="">
+            </map>
+          </li>
+          <li class="nav-item" style="padding-left: 15px;">
+            <a class="nav-link active" href="trangchu.html">Trang Chủ</a>
+          </li>
+          <li class="nav-item" style="padding-left: 15px;">
+            <a class="nav-link active" href="gioithieu.html">Liên Hệ</a>
+          </li>
+          <li class="nav-item" style="padding-left: 15px;">
+            <a class="nav-link active" href="feedback.html">Góp ý</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item" style="padding-right: 10px;"><a class="nav-link cart-link" href="dangky.html">
+              <i class="fas fa-solid fa-user" style="color: deeppink;"></i>Tài khoản</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="overlay"></div>
+    <div class="container text-center text-white position-relative">
+      <h1>CHÀO MỪNG ĐẾN VỚI NEW YORK FASHION STORE</h1>
+      <p>Khám phá những xu hướng thời trang mới nhất dành cho sinh viên</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-light py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Về cửa hàng của chúng tôi</h2>
+      <p class="section-content">
+        Chúng tôi mong muốn mang lại trải nghiệm mua sắm tiện lợi và thú vị cho sinh viên trên khắp cả nước. Student
+        Fashion không chỉ cung cấp quần áo, mà còn giúp bạn thể hiện cá tính và phong cách riêng một cách trọn vẹn.
+      </p>
+    </div>
+  </section>
+
+  <section class="why-choose-us">
+    <div class="container">
+      <h2 class="section-title text-center">🤔Tại sao chọn New York Fashion Store?</h2>
+      <ul class="reasons-list section-content">
+        <li>
+          <strong>👉Sản phẩm đa dạng:</strong> Từ áo thun năng động, quần jeans trẻ trung đến váy điệu đà, tất cả đều được
+          cập nhật theo xu hướng mới nhất.
+        </li>
+        <li>
+          <strong>👉Giá cả sinh viên:</strong> Cam kết mức giá hợp lý, ưu đãi hấp dẫn, giúp bạn dễ dàng sở hữu những bộ đồ
+          yêu thích mà không lo về chi phí.
+        </li>
+        <li>
+          <strong>👉Mua sắm tiện lợi:</strong> Chỉ cần vài cú nhấp chuột, bạn có thể đặt hàng mọi lúc, mọi nơi và nhận
+          hàng ngay tại nhà.
+        </li>
+        <li>
+          <strong>👉Hỗ trợ tận tình:</strong> Đội ngũ chăm sóc khách hàng luôn sẵn sàng giải đáp mọi thắc mắc, từ chọn
+          size đến chính sách đổi trả.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Products Overview -->
+  <section id="products" class="container my-5">
+    <h2 class="section-title text-center mb-4">Bộ sưu tập nổi bật</h2>
+    <div class="position-relative">
+      <button class="scroll-btn left" onclick="scrollLeft()">&#8249;</button>
+      <div class="product-scroll">
+        <div class="product-item">
+          <img src="img/aodongphuc.png" alt="Áo đồng phục" class="img-fluid">
+          <h5>Áo đồng phục</h5>
+          <p>Thanh lịch nơi giảng đường, tự tin trong mọi sự kiện.</p>
+        </div>
+        <div class="product-item">
+          <img src="img/aotheduc.png" alt="Áo thể dục" class="img-fluid">
+          <h5>Áo thể dục</h5>
+          <p>Tự tin vận động, khẳng định cá tính CTU.</p>
+        </div>
+        <div class="product-item">
+          <img src="img/daydeotim.png" alt="Dây đeo tím" class="img-fluid">
+          <h5>Dây đeo CTU</h5>
+          <p>Tinh gọn, phù hợp với mọi sinh viên.</p>
+        </div>
+        <div class="product-item">
+          <img src="img/mockhoa_1.png" alt="Móc khóa" class="img-fluid">
+          <h5>Móc khóa CTU</h5>
+          <p>Thể hiện sự tri ân cùng CTU.</p>
+        </div>
+        <div class="product-item">
+          <img src="img/tuivai_1.png" alt="Túi vải" class="img-fluid">
+          <h5>Túi vải CTU</h5>
+          <p>Tự hào là sinh viên CTU.</p>
+        </div>
+        <div class="product-item">
+          <img src="img/nonbaohiem_1.png" alt="Nón bảo hiểm" class="img-fluid">
+          <h5>Nón bảo hiểm CTU</h5>
+          <p>Cùng CTU tham gia giao thông an toàn.</p>
+        </div>
+      </div>
+      <button class="scroll-btn right" onclick="scrollRight()">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="promotion-section">
+    <div class="container text-center">
+      <h2 class="section-title">✨Ưu đãi đặc biệt dành cho bạn!✨</h2>
+      <p class="section-content">Hãy nhanh tay tận dụng các chương trình khuyến mãi hấp dẫn của New York Store Fashion:</p>
+      <div class="promotion-list">
+        <div class="promotion-item">
+          <h3>Miễn phí vận chuyển</h3>
+          <p>Áp dụng cho tất cả đơn hàng từ 300.000 VNĐ.</p>
+        </div>
+        <div class="promotion-item">
+          <h3>Giảm giá 20%</h3>
+          <p>Khi mua từ 3 sản phẩm trở lên.</p>
+        </div>
+        <div class="promotion-item">
+          <h3>Quà tặng bất ngờ</h3>
+          <p>Nhận quà tặng độc quyền khi đặt hàng trong tháng này.</p>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary mt-4" onclick="checkLogin()">Mua sắm ngay</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-2 py-md-3 py-lg-4 bg-footer">
+    <!-- <a href="main.html" target="_blank"><img src="img/home.png" class="logo"></a> Khi nhấp vào logo sẽ được dẫn về trang chủ -->
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3">
+        <h3>Liên hệ chúng tôi</h3>
+        <ul>
+          <li style="padding-top: 5px;"><i class="fas fa-map-marker-alt"></i> P.Xuân Khánh, Q.Ninh Kiều, TP. Cần Thơ
+          </li>
+          <li style="padding-top: 15px;"><i class="fas fa-envelope"></i> fashionstore@gmail.com</li>
+          <li style="padding-top: 15px;"><i class="fas fa-phone"></i> 0123456789</li>
+          <li style="padding-top: 15px;"><i class="fa-regular fa-clock"></i> 07:00 AM - 09:00 PM</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <h3>Theo dõi chúng tôi</h3>
+        <ul>
+          <li><a href="https://facebook.com" target="_blank" style="text-decoration: none;"><i
+                class="fa-brands fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank" style="text-decoration: none;"><i
+                class="fa-brands fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://instagram.com" target="_blank" style="text-decoration: none;"><i
+                class="fa-brands fa-instagram"></i> Instagram</a></li>
+          <li><a href="https://tiktok.com" targer="_blank" style="text-decoration: none;"><i
+                class="fa-brands fa-tiktok"></i> Tiktok</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <h3>Chính sách của chúng tôi</h3>
+        <ul>
+          <a href="#" target="_blank" style="text-decoration: none;">
+            <li>Chính sách chung</li>
+          </a>
+          <a href="#" target="_blank" style="text-decoration: none; padding-top: 20px;">
+            <li>Chính sách bán hàng</li>
+          </a>
+          <a href="#" target="_blank" style="text-decoration: none; padding-top: 20px;">
+            <li>Chính sách bảo mật</li>
+          </a>
+          <a href="#" target="_blank" style="text-decoration: none; padding-top: 20px;">
+            <li>Chính sách thanh toán</li>
+          </a>
+          <a href="#" target="_blank" style="text-decoration: none; padding-top: 20px;">
+            <li>Chính sách đổi trả</li>
+          </a>
+          <a href="#" target="_blank" style="text-decoration: none; padding-top: 20px;">
+            <li>Chính sách vận chuyển</li>
+          </a>
+        </ul>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h3>Phương thức thanh toán</h3>
+        <ul class="list-unstyled d-flex flex-wrap justify-content-centerX">
+          <li><i class="fa-brands fa-cc-visa payment-icons" aria-hidden="true" style="color: #1a1f71;"></i></li>
+          <li><i class="fa-brands fa-cc-mastercard payment-icons" aria-hidden="true" style="color: #f79e1b;"></i></li>
+          <li><i class="fa-brands fa-cc-paypal payment-icons" aria-hidden="true" style="color: #003087;"></i></li>
+          <li><i class="fa-brands fa-cc-amex payment-icons" aria-hidden="true" style="color: #2e77bb;"></i></li>
+          <li><i class="fa-brands fa-cc-jcb payment-icons" aria-hidden="true" style="color: #9abb2e7c;"></i></li>
+          <li><i class="fa-brands fa-cc-apple-pay payment-icons" aria-hidden="true"></i></li>
+          <li><i class="fa-brands fa-cc-amazon-pay payment-icons" aria-hidden="true"></i></li>
+          <li><i class="fa-brands fa-cc-stripe payment-icons" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+    </div>
+    <p class="text-center m-0 mt-3 mt-md-4 text-secondary small"> &#169; 2024 Bản quyền thuộc về New York Fashion Store.
+    </p>
+  </footer>
+
+  <!--Bổ sung-->
+  <!--Nút quay về trang đầu-->
+  <button id="backToTop" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+  
+  <script>
+    // Hàm xử lý nút khi cuộn xuống và cuộn lên khi nhấn nút
+    const backToTopButton = document.getElementById('backToTop');
+  
+    // Hiển thị nút khi cuộn xuống
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = 'flex';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+  
+    // Cuộn về đầu trang
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Xử lý nút cuộn trái, phải trong bộ sưu tập nổi bật
+    function scrollLeft() {
+      const scrollContainer = document.querySelector('.product-scroll');
+      scrollContainer.scrollBy({ left: -200, behavior: 'smooth' }); // Cuộn sang trái
+    }
+
+    function scrollRight() {
+      const scrollContainer = document.querySelector('.product-scroll');
+      scrollContainer.scrollBy({ left: 200, behavior: 'smooth' }); // Cuộn sang phải
+    }
+  </script>
+  
+</body>
+</html>

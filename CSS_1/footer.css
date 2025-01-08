@@ -1,0 +1,216 @@
+/* Style chung */
+/* hieu ung chan trang*/
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+footer {
+    background: linear-gradient(90deg, #bce4eb, #fce0ce, #ffffff);
+    padding: 20px;
+    /* text-align: center; */
+    color: #333;
+}
+
+/* thiet lap cau truc cot trong footer */
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* thiet lap kieu cho cac cot trong footer */
+.footer-col {
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+/* thiet lap kieu cho tieu de cua moi cot trong footer */
+.footer-col h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* thiet lap kieu cho danh sach trong footer */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logo {
+    width: 10vw;
+    /* Logo chiếm 10% chiều rộng màn hình */
+    height: auto;
+}
+
+/* thiet lap kieu cho kieu cho cac muc trong danh sach cua footer */
+.footer-col ul li {
+    line-height: 2;
+}
+
+h1,
+h2 {
+    color: #333;
+    margin-bottom: auto;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5733;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* hieu ung noi bat cho chu*/
+.highlight {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff5733;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.row,
+.form-label,
+.form-control {
+    margin-bottom: auto;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.navbar-brand img {
+    width: 80px;
+}
+
+/* Style form */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Style button */
+button.nutbam {
+    background-color: #fce0ce;
+    color: #333;
+    border: 2px solid #bce4eb;
+}
+
+button.nutbam:hover {
+    background-color: #bce4eb;
+    color: white;
+    border: 2px solid #fce0ce;
+}
+
+/* Style search bar */
+input.earch-bg {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 10px;
+}
+
+button.search-button {
+    background-color: #bce4eb;
+    color: #333;
+    border: none;
+    padding: 10px;
+}
+
+button.search-button:hover {
+    background-color: #fff;
+    /* color: white; */
+}
+
+.search-input {
+    width: 200px;
+    max-width: 100%;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.search-button {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+/* @media (max-width: 768px) {
+    .search-input {
+        width: 150px;
+    }
+} */
+
+/* Style links hover */
+a.nav-hover:hover {
+    color: #fce0ce !important;
+}
+
+/* Style footer social media icon */
+.fab.fa-facebook,
+.fab.fa-twitter,
+.fab.fa-tiktok,
+.fab.fa-google,
+.fab.fa-instagram {
+    font-size: 20px;
+    margin: auto;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.fab.fa-google:hover {
+    background-color: #e3a5a5;
+    color: #f11d20;
+    text-decoration: none;
+}
+
+.fab.fa-facebook:hover {
+    background-color: #3b5998;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fab.fa-twitter:hover {
+    background-color: #1da1f2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fab.fa-instagram:hover {
+    background-color: #db4490;
+    color: #fff;
+    text-decoration: none;
+}
+
+.fab.fa-tiktok:hover {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style footer payment icon */
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    /*cho phep tu xuong dong*/
+}
+
+.payment-icons i {
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.payment-icons i:hover {
+    transform: scale(1.2);
+    color: #007bff;
+}
